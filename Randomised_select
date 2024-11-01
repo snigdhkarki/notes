@@ -1,0 +1,3 @@
+Randomised select
+
+Randomised select help us find the ith  order statistic (ith smallest element) among a list of elements in 0(n) expected time and 0(n²) worst case. Here we select a random element from the list and use it as pivot to find the lest and right subarray. The index of the pivot element is known and we see if the pivot elemen's index is the index we want. If not we send the left or right subarray to the function again until a single element array obtained.  

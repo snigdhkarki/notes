@@ -1,0 +1,14 @@
+Hash table using chaining
+It puts all the elements that map to the same slot in a linked list for that slot. Each slot has a pointer to the head of the slot's linkedlist. The worst case is when all the elements are mapped to the same slot. The number of slots is proportional to number of elements possible(say ratio is constant α) then the average time is O(1+α), delete and insert take O(1) time complexity. Some of the properties of a good hash function for chaining is:
+1) A random key among keys that are selected for storing must have equal chance of being mapped to any of the slot. This is difficult because there is no way to know the distribution of keys and also because a same key must always be mapped to the same slot so we cant use a randomised algorithm. 
+2) Keys that are likely to come along with each other should be hashed to different slots.
+Some hashing functions include:
+1) Division hashing: 
+h(k) = k MOD m 
+where m is the size of hash table. m must not be a power of 2 and it will be better if m is a prime number.
+2) Multiplication hashing:
+h(k) = ⌊m*(kA MOD 1)⌋ 
+where A = 0.61 and m can be power of 2 for easy multiplication
+
+
+

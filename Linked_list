@@ -1,0 +1,5 @@
+Linked list
+- Used for ordered data of arbritary size where the position where the data is inserted matters and for sequencial access
+- Types of linked list include doubly linked list(where each node has a prev and next pointer attribute), singly linked list(no prev attribute) and circular linked list(where the last node has next pointer point to first node and viceversa) 
+- Implementation of linked list is by using object with prev(optinal), next pointer attributes and key attribute. Unless its circularly linked list, its first node is pointed by L.head and it has prev attribute as NIL and L.tail has next attribute as NIL. We can have a sentinal that acts same as the object used to create elements of linked list and is pointed to by L.nil. It's next pointer attibute will point to the first node while its prev pointer attribute will point to the last node. Also the last node's next attribute will point to sentinal object.
+- Search(L, k) takes O(n) while Delete(L, x) (for doubly linked list although deleting when a key is given is the same time O(n)) and Insert(L, x) (inserting at head) takes O(1) time.

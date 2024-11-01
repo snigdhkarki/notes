@@ -1,0 +1,10 @@
+Matrix chain multiplication
+When we need to multiply matrix A₁.A₂.A₃.A₄.A₅.A₆ or any chain of n matrix then using different parenthesis causes different no of operation to find the product.If this is the parentesis choices that causes the lowest no of operation
+((A₁).((A₂).(A₃))).(((A₄).(A₅)).(A₆)) then we can show the choices in a two dimentional space where the x axis denoted the elements position which the starting bracket touch and the y axis denotes the element position which the ending bracket touch. We can see that there is a pair of choices that are always related with each other such that if one choice happens then the other choice also always happens (for example if (AB)CDE happens then AB(CDE) also happens). Also to satisfy the property that making a
+choice should cause a subproblem of same form to arise, we can only make choices from the y axis of our choice space. In the 
+case above, we should choose the choice (A₁.A₂.A₃).A₄.A₅.A₆ which also causes the choice A₁.A₂.A₃.(A₄.A₅.A₆). This would satisfy
+the dynamic programming condition. Hence we can use the recursion formula
+m[i,j] = min{i≤k<j}(m[i,k] + m[k+1, j] + p(i-1)p(k)p(j)) where if i==j then 0
+If we do not save the solved subproblems we get the time complexity T(n) = 1+ ∑{1≤k<n}(T(k)+T(n-k)+1) so T(n) = 0(2^n) 
+But if we save the subproblems then since there are only n² subproblems and each subproblem only consists of n comparision if
+we know the subproblems of smaller size so the time complexity becomes 0(n³). 

@@ -1,0 +1,9 @@
+Red black tree 
+For a tree with n elements it has height of at most 2lg(n+1).  It has the same property of binary tree as well as extra properties as follows:
+1) All nodes have extra property called color
+2) The color of leaves and root is black.
+3) It has a sentinal node that points to the root and the leaves point to the sentinal node. It is black
+4) All red nodes must have both children as black 
+5) All nodes have the same black height (the number of black nodes to traverse from the node to reach any of its leaves)
+It causes all the operations like Search, Maximum, Minimum, Successor and Predessessor to have the same code as binary tree and have the time complexity be O(lgn). Insert might cause the red black property to be violated. For this to not occur the same code as in binary tree is used but around the end of the function the input z is given red color and fixup(T,z) is called to make do operations like rotation(does not affect binary tree property) and changing color to make sure that property still hold. Insert takes worst case time of O(lgn). Delete is also simmilar to the one in binary tree but we have the variable node y contain the node to be deleted z or the original y as in binary tree if z has both children. We also have to save the original_y_color before y color is changed. Y color is changed to color of z. X is the node that replaces y. It is used as input to call the function fixup() if y_original_color is black. 
+

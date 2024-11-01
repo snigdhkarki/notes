@@ -1,0 +1,22 @@
+ - Data Structure (or dynamic set)
+Dynamic sets are the sets that can be manipulated by algorithms to grow, shrink, or change. Each element can be accessed or modified by using a pointer to that element object. Each element object has a unique key and satellite data that is not used for set implementation. Some of the types of operation that typical data structure support are:
+1) Query operation: It does not modify set.Some examples include:
+    a) Search(S, k): which takes set S and key K as input and returns the pointer to the element object x such that x.key = k (here we denote x->key as x.key in pseudocode)
+    b) Maximum(S): returns the pointer to the object with maximum key value
+    c) Minimum(S): returns the pointer to the object with minimum key value
+    d) Successor(S, x): returns the pointer to the object that has minimum key value that is higher then x->key
+    e) Predeccessor(S, x): returns the pointer to the object that has maximum key value lower then x->key 
+2) Modifying operation: It modifies the set itself. Some examples include:
+    a) Insert(S, x): Adds element pointed by x
+    b) Delete(S, x): Removes element pointed by x 
+Examples of data structures include:
+1) Heap
+2) Stack
+3) Queue
+4) Linked-list
+5) Rooted-tree
+6) Hash-table with chaining
+7) Hash-table with open addressing
+8) Binary-tree
+9) Red-and-black-tree  
+

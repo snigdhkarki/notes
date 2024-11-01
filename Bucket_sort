@@ -1,0 +1,3 @@
+ - Bucket sort
+
+It is a sorting method where the range of possible inputs are real numbers from 0 to 1 and they are picked randomly from a uniform distribution. Here we make n buckets and put the element A[i] in bucket B[A[i]*n] and we sort each bucket and we join them. Since the elements are picked from a uniform distribution there should be very less no of elements in the same bucket. This sort takes worst case 0(n) time complexity.

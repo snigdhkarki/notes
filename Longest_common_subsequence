@@ -1,0 +1,9 @@
+Longest common subsequence
+Subsequence of a sequence is the new sequence formed by removing zero or more elements from the original sequence. The longest
+common subsequece can be found by using the recursion formula
+c[i,j] = 0 (if i=0 or j=0)
+       = c[i-1,j-1] + 1 (if X(i) = Y(j))
+       = max(c[i-1,j], c[i,j-1]) (if X(i) ≠ Y(j))
+Where c[i,j] is the length of longest common subsequence of X and Y sequence's from start till ith and jth element respectively.
+Bottom to top approach can be done by using the 2d choice space row wise solving.
+

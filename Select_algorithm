@@ -1,0 +1,4 @@
+Select Algorithm
+
+Select algorith finds the ith smallest element from a list at a worst time 0(n) complexity. It does this by first seperating the array into groups with each group having 5 elements. It then sorts each group and finds the median of each group. If there are more than one median obtained then the medians are send to the function again till one median of medians (say x) is obtained. We use this median as a pivot element to find the right and left side of array and if the median has the index that we desire then the median is the desired value, else we call the function on either the right or left subarray.
+

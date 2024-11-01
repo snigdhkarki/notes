@@ -1,0 +1,15 @@
+Heap: A datastructure that works like a graph where each node has one parent and at most 2 children and is implemented 
+using array where the nodes are indexed top to bottom and left to right.Types of heap include:
+1) Min-heap: Where the parent is always smaller than the children
+2) Max-heap: Where the parent is always bigger than the children
+
+Heap implementation as array: Parant of i = (i-1)/2 , Left child of i = i*2+1 , Right child of i = i*2+2
+
+Operations on heap include:
+1) Insertion: The element to be inserted is kept in the last node (from top to bottom left to right) and it is heapifiedup by swapping it with its parent if the parent is smaller/bigger than child
+2) Extraction: To extract the minimum or maximum value, the root node is taken and is replaced with the last node which is then heapified down by swapping it with its child if it has a child bigger/smaller than it
+
+Application:
+1) Heap-sort: The elements of array are inserted one by one into the heap and extracted one by one and appended to the
+new array.
+2) Priority-queue: Element can be inserted and extracted from heap.

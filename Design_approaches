@@ -1,0 +1,26 @@
+Algorithm is set of computational steps that take in input and give output.
+
+1) Increment approach 
+It makes use of loop invarient(A property that is true at the beggining of each iteration of the loop). It must satisfy three conditions
+    a) Initialization: Loop invarient must be true for base condiotion
+    b) Consistent: When loop invarient is assumed to be true at beggining of a iteration, it must be true at the
+                   the beginning of the next iteration.
+    c) Termination: Loop invarient must imply the algorithm is true at termination
+Example is insertion sort method where the loop invarient is the property "A[1 .. j-1] consists of elements of
+subsequence A[1 ... j-1] of original array A sorted in assending order"
+
+2) Devide and conquer approach 
+It makes use of recursion(Fuctions calling itself till a certain condition is satisfied). It must satisfy these three
+conditions
+    a) Devide: the original problem into subproblems(sometimes into only one subproblem) of smaller size
+    b) Conquer: the subproblems using recursion(if small subproblem then direct) 
+    c) Combine: the solutions of subproblems to obtain solution of original problem
+Example is merge sort method where "The original array is devided into 2 array of n/2 size and each solves recursively  (is of length one then return same) and combine by appending the smaller from the ends of both array to the solution"
+Another example is maximum contigious subarray sum where "The original array is devided into 2 array of n/2 sizes and 
+solved recursively(return their position in original (n to n) and element if single length array) and combine by findingthe maximum sum among the left, right and max contigious subarray passing through the middle.
+
+Algorith analysis: To find the function that gives time taken for worst case senario with respect to input size.
+For incremental approach find the time taken by each line in worst case senario and add them all.
+For devide and conquer approach find the recurrence formula where function is defined according to algorithmic notation and the recurrence formula for smaller size input and solve it using recurrence solving techniques.
+
+

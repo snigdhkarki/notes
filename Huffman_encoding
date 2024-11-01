@@ -1,0 +1,10 @@
+Huffman encoding tree
+It is an optimal method of compressing a file filled with charecters. Here each charecter in a file is given a codeword. We 
+use prefix codeword which means no code word can be a prefix of another code word. It can compress files memory by 20% to 90%. 
+Here we are given the frequency of each charecter that comes in a file. Then we can see the average cost of one charecter is 
+Cost = ∑(c.prob X c.depth)
+We can use a greedy algorithm where we select the two charecters with the least frequency from a min priority queue and create 
+a new object that denotes the node that the two charecters are now a children of and put the node in the min priority queue 
+with the frequecy of the object as the sum of frequency of the two children. We have to do it in a loop of n-1 times so the 
+time complexity of huffman encoding tree is 0(nlgn) where lgn is the time taken to insert the new object in min priority queue.
+

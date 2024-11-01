@@ -1,0 +1,15 @@
+Optimal binary tree
+Lets say we want to make a program that converts english words into french. We can use a binary search tree to have fast search
+for english words and have the french equivalent in the satellite data. But that can cause the words that are frequelty searched
+to be low in the tree causing a high value for expeceted no of edge travelled to search a word. Thus when the probability of 
+each word occuring is given in question we can make a optimal binary tree to reduce the expected no of edge travelled to search
+for a word.
+Here we first sort all the keys(words) in assending order <k₁, k₂, ...> and let p(i) be the probability of k(i) occuring and q(i) be the probability of nonsense word between k(i-1) and k(i) occuring.we use the following recursion formula:
+e[i,j] = min{i≤r≤j}(e[i,r-1]+e[r+1,i] + w[i,j])   (when j≥i)
+       = q(i-1)  (when j = i-1)
+where e[i,j] is the expected no of edge travelled in the optimal binary tree with <k(i) ... k(j)> including the one edge that
+comes on top of root and w[i,j] is the total probability of word occuring between k(i) and k(j) or in other words
+w[i,j] = ∑{i≤k≤j}(p(k) + q(k)) + q(i-1)
+The time taken if the solutions to subproblems are stores is 0(n³) because the no of subproblems is n² and for each subproblem
+we only require n comparision if the subproblems of smaller size are known.
+

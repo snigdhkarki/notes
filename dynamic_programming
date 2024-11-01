@@ -1,0 +1,9 @@
+Dynamic programming
+It appplies when solving optimization problems(problems that have a lot of solutions (solution consists of set of choices) and where each solution has a certain value associated with it and we want the optimal solution(solution with max or min value value)) and when making a choice it is required to solve a subproblem of same form and the solution to the same subproblem might be required multiple times. It must exibit optimal substructure(optimal solution to a problem uses optimal solution to subproblem). It is different from devide and conquer since it saves the solved subproblems so same subproblems should not be solved more than once.
+The two approached to dynamic programming are:
+1) TopDown approach: we call the function on smaller and smaller subproblems each time
+2) BottomUp approach: we sort all possible subproblems in increasing order and solve each starting from the smallest subproblem
+We can reconstruct the solution by not only storing the optimal value but also the optimal choice. 
+Shortest path finding algorithm can be sloved using dynamic programming but the longest path problem cant cuz it does not 
+satisfy the optimal substructure condition because of the simplicity condition.
+

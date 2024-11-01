@@ -1,0 +1,6 @@
+Hash table
+It is used when we only need the operation Search, Insert, Delete. It is better then direct adressing(using all possible keys as index in simple array) when the no of keys stored is a lot lesser then the total no of possible keys because it uses an array that is proportional in size to the number of keys actually stored. It used a hash function that takes input key and outputs the slot where the key is to be stored h(k). Collision occurs when there are two keys that are mapped to the same slot. According to collision resolution technique there are two types of hash table:
+1) Using chaining 
+2) Using openaddressing
+It's search function has time complexity of  O(n) although the average time complexity is O(1). Most hashing functions assumes the keys are a subset of natural numbers. If the keys are strings, we can use a radix base system. For example for the string "pt", we know that the ascii value of p is 112 and t is 116 so the natural number that is mapped to "pt" is 112*128+116 = 14452 (where 128 is the ASCII radix)
+

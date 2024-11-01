@@ -1,0 +1,16 @@
+Amortized analysis 
+The average cost of an operation in sequence of repeating operations might be less than the worst case cost of that operation
+when executed alone. It is different from averagecase analysis because unlike that, it gives the worst case of average time
+taken by an operation. The methods of amortized analysis are as follows:
+1) Agregate method: In this method we find the total cost of sequence of repeating operation and devide it by no of repeating 
+operations.
+2) Accounting method: Here we assign a cost higher then the actual cost to the operations that occur at beginnning so that the 
+extra credit can be used by operations later on that might have cost more than the cost assigned  to them
+3) Potential method: It's like accounting method but instead of having credit from each operation we have credit of the entire 
+data structure as potential.
+
+Some of the programs  where this kind of analysis are beneficial are:
+1) Multipop
+2) Incrementing binary
+3) Dynamic table
+

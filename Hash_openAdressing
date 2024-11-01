@@ -1,0 +1,13 @@
+Hashing using open adressing 
+A slot can only contain 1 element or NIL value. It can fill up. It has a hash function that maps a key and the nth attempt to  probe to a certain slot. 
+h: U X {1 ... m} -> {0 ... m-1}
+It probes a unique sequence of slots for each key. It is very difficult to delete data since the same sequence of elements are probed to search for a key. So it is mostly used for situation where delete is not needed. Successful Search funtion works in O((1/α)lg(1/(1-α))) expected time, while unsuccessful search function and insert function works at expected time of O(1/(1-α)).
+Some of the functions used for hashing in open adressing are:
+1) Linear hashing: h(k, i) = (h'(k) + i) MOD m 
+where m is the size of hash table and h' is a normal hashing function. This causes primary clustering because the when keys are mapped to the same slot, those keys also have the same probing sequence. It has m unique probing sequence possible.
+2) Quadratic hashing: h(k, i) = (h'(k) + c₁i + c₂i*i) MOD m
+It causes milder secondary clustering although no of unique probing sequence is still m
+3) Double hashing: h(k, i) = (h₁(k) + ih₂(k)) MOD m 
+It causes less clustering cause there are m*m no of unique hashing possible.
+
+

@@ -1,0 +1,8 @@
+Order statistic tree
+Augmented data structure made using Red Black tree as its underlying data strucuture. Each node has the attribute x.size which contains the no of nodes in the subtree rooted at x(including x). The sentinal node has x.size = 0. For any node x, x.size = x.left.size + x.right.size +1. From the theorem of red black tree as augmented data structure we can say that size attrute can be maintained in O(lgn) time. We can have an extra operation called  Search(x, i) that searched the ith rank element in subtree rooted at x using Search(T.root, i) as the first call. It also has another extra operation called Rank(T, x) that  gives the rank of x element in the tree T. Since more than one element can have the same key value, the algorithm must give one element a rank (say y) and the other element with same key as rank y+1. 
+
+Search(x, i): will return x if x.left.size + 1 = i, else it will call Search(x.left, i) if x.left.size +1 > i else will call Search(x.right, i- (x.left.size +1)). 
+Rank(T, x): first has y as  x and a while loop that maintains the rank of x in the subtree rooted at y while y keeps going up to the root
+
+Each of these operation take O(lgn) time in worst case
+

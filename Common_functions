@@ -1,0 +1,8 @@
+Common function 
+
+1) Monotonous increasing/decreasing function: x₁ ≤ x₂ → f(x₁) ≤ f(x₂)
+2) Strictly increasing/decreasing function: x₁ < x₂ → f(x₁) < f(x₂)
+3) Floor and ceiling function: ⌊x/2⌋ + ⌈x/2⌉ = x
+4) Fibbonachi number: F(n) = (φⁿ + ϕⁿ)/√5 (where the values are roots of x²=x+1)
+5) Mod: a%n = b%n <=> (a-b)%n = 0
+6) Factorial: n! = o(nⁿ) , eⁿ = o(n!) , lg(n!) = 0(nlgn)

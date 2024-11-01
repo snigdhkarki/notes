@@ -1,0 +1,15 @@
+Increment binary counter amortized analysis
+Here at first glance on a sequence of increment operation on a k length binary number we can see that a increment changes at most k no of bits and that might trick us into thinking that the worst time complexity of n sequence of increment operator is 0(nk)
+but that is not tight. Using amortized analysis:
+1) Aggregate analysis: We can see that the least significant bit changes every time in increment . The second most significant 
+bit changes in once every two times or n/2 times during a sequence of n increments. The third most significant bit changes
+n/4 times and so on.If we add it till k bit then we can see that the no of changes that happen during n increment operation is 
+2n or 0(n) worst case time.
+2) Accounting method: We can see that only one bit is converted to 1 and any no of 1 are converted to 0 during an increment.
+Using this property we can give the value of 2 to each increment, 1 for converting a 0 to 1 and another 1 for converting the 1 
+back to 0 whenever required
+3) Potential method: We can have the potential function of array p(A(i)) to be the no of 1 in the array A after ith increment.
+This causes c'[i] = actual cost + no of 1 increased = (1+no_of_1_to_0) +(1-no_of_1_to_0) = 2. Thus amortized cost of ith 
+increment is 2 so the worst case cost of n increment is 0(n).
+
+

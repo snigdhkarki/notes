@@ -1,0 +1,19 @@
+Dynamic Table
+We dont know the no of element a table might store beforehand. We might want a bigger table and shift all the element to the
+bigger table if more elements is added than the table can handle. If a lot of elements are deleted, we might want to make
+a smaller table and shift the elements into the smaller table so memory is not wasted. We can have the fraction of unused 
+memory bounded by a fraction at all times by using a dynamic table. Here let us make it such that a new table of twice the 
+size is created when a element is inserted into a table that is already full. Thus a sequence of n insert operation might seem 
+to cause a time complexity of 0(n²) as a single insert has the worst case when the table expands having to shift n elements. But
+this is not tight since if we use amortized analysis(aggreagate analysis) we can see that T(n) = n + ∑{1≤k≤lg(n)}(2^k) 
+which equals T(n) = 3n. Hence the time constant at worst case is 0(n). We can also use the accounting method by having each
+insert get a cost of 3, 1 for the actual cost, 1 to shift itself while expanding and 1  to shift a element that has already 
+shifted at a previous expantion
+To make it able to both contract and expand, we should not contract it when the size becomes 1/2 because a sequence of insert, 
+delete, delete, insert, insert can cause  continuous expantion and contraction if done when a table is already full. This is 
+why we will contract when the table is 1/4 full. We can use the potential function:
+p(D(i)) =  2*t.num - t.size    (when table is more than 1/2 full)
+        =  t.size/2 - t.num    (when table is less than 1/2 full)
+This also causes the worst case of n insert and delete to be 0(n). 
+
+

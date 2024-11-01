@@ -1,0 +1,25 @@
+ - Asymptotic notations
+
+1) 0(g(n)) = { f(n) : there exists positive constants C₁, C₂, n₀ such that C₁g(n) ≤ f(n) ≤ C₂g(n) for all n>n₀}
+In other words there exist constant multiples of g(n) that sandwitch f(n) for large enough n.
+
+2) O(g(n)) = { f(n) : there exists positive constants C, n₀ such that f(n) ≤ Cg(n) for all n>n₀}
+In other words there exist constant multiple of g(n) that is always greater than f(n) for large enough n.
+
+3) Ω(g(n)) = { f(n) : there exists positive constants C, n₀ such that Cg(n) ≤ f(n) for all n>n₀}
+In other words there exist constant multiple of g(n) that is always less than f(n) for large enough n.
+
+4) o(g(n)) = { f(n) : f(n) = O(g(n)) and f(n) ≠ 0(g(n)) for all n>n₀}
+
+5) ω(g(n)) = { f(n) : f(n) = Ω(g(n)) and f(n) ≠ 0(g(n)) for all n>n₀}
+
+ - Asymptotic properties 
+
+0 act like = , O act like ≤, Ω act like ≥, o act like <, ω act like >
+
+ - Asymptotic notation in formulas:
+
+a) n = O(n²) → n ∈ O(n²)
+b) n + 3n² = n + O(n²) → n + 3n² = n + f(n) for some f(n) ∈ O(n²)
+c) n² + O(n) = O(n²) → for each f(n) ∈ O(n) there exist g(n) ∈ O(n²) such that n² + f(n) = g(n)
+

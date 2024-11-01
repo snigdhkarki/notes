@@ -1,0 +1,5 @@
+Find max or min
+
+To find max or min very fast we can take first element as current max and current min and compare a pair of inputs after that with themselves, the lower value among the pair is compared with the min and the higher value is compared with the max and so on. This causes us to have 3 comparision for two pair instead of the normal 4.
+
+

@@ -1,0 +1,13 @@
+Augmented data structure 
+Its formation process includes:
+1) Choose underlying data structure
+2) Decide the additional information for each element to have
+3) See if you can maintain the additional information in basic modifying operation
+4) Add new operations using the additional information
+Theorem for making augmented data structure from red black tree: If f is the additional attribute then if f of any element x can be obtained from attributes of x, x.right and x.left then we can maintain the attibute f in insert and delete operation in O(lgn) time
+Some of the augmented data structure made by using red black tree include:
+1) Order statistic tree
+2) Interval tree
+
+
+

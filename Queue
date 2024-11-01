@@ -1,0 +1,6 @@
+Queue
+- It works on FIFO principle
+- Enqueue for insert, Dequeue for delete and return pointer to element
+- Implementation of queue with at most n elements at a given time by an array Q.arr[0...n], having attributes Q.head containing the index of first element entered that has not been deleted and Q.tail containing the index of position where the new element will be added. Initially Q.head = Q.tail = 0. If Q.head or Q.tail tries to increment to more than n then it becomes 0.
+- Full queue if Q.head = Q.tail + 1, empty queue if Q.head = Q.tail
+- Enqueue(Q, x), Dequeue(Q), FullQueue(Q), EmptyQueue(Q) have time complexity O(1)

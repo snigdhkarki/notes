@@ -1,0 +1,6 @@
+Rooted trees
+Having multiple children pointers in each node can cause the problem of too much memory waste and will only work if know that no of children is bounded by a certain constant(wont work for arbritary no of childern). So to solve this each node will have two attibut:
+1) x.leftmost_child: which points to leftmost child of x
+2) x.right_sibling: which points to the sibling just right of x
+No children then leftmost_child is Nil and no sibling to right then right_sibling is Nil
+

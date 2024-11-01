@@ -1,0 +1,18 @@
+Multipop amortized anaysis
+Say we have a sequence of push, pop or multipop operations in repeating manner. Multipop lets us pop any number of element from
+the stack. The worst case time of multipop is 0(n) when there are n number of elements in stack. Since there are n no of push
+we might be tricked into thinking that  the sequenece has a worst case time complexity of 0(n²) but that is not the case 
+because if we use amortized analysis
+1) Aggregate analysis: Here we can see that there are at most n push so there is at most n pop. Thus the total cost of sequence of n repeating operation is 2n. Hence the worst case time complexity is actually 0(n)
+2) Accounting method: Here we can give each push operation cost 2 even if it's actual cost is 1 so that the extra cost can later
+pay for the pop operation of that object. Hence we can give pop and multipop cost 0 as they are paid using the credit of push so
+time complexity of worst case is 2n or 0(n) still as sum of amortized cost is always greater then or equal to sum of actual cost
+3) Potential method: Here we can make the potential function p(D(i)) map to real number where D(i) is the datastruct after the
+ith operation. We let p(D(i)) equal to the no of elements in D(i). This causes the amortized cost
+c'[i] = c[i] + p(D(i)) - p(D(i-1))
+when push c'[i] = 1+ 1 = 2
+when pop or multipop c'[i] = k - k = 0
+Since D(n) > D(0) so sum of amortized cost is always greater than or equal to sum of actual cost. Hence the time complexity of 
+worst case is 0(n)
+
+

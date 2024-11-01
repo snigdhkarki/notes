@@ -1,0 +1,13 @@
+Activity selection problem
+Here we are asked to select a group of activities to use a resourse among a set of activities that use the same resourse if the resource can only be used by one activity at a time. Or in other words we want to find the set with largerst no of compatible 
+activity (activities are said to be compatible if there are no overlapping activities). This can be done easily using dynamic 
+programming by using the following recursive function:
+c[i,j] = max{a∈A}(c[i,a] + c[a,j] + 1)  (if S[i,j] = φ  then 0)
+where c[i,j] is the maximum no of compatible activities from the end of ith activity to the start of jth activity. A is the set
+of activities between ith acitivity's start to jth activity's end or S[i,j]. By saving solved subproblems T(n) = 0(n³)
+There is a simpler greedy algorithm that can be used to solve this problem is lesser time. Here we can see from our intuition 
+that we want to choose a activity that has the least no of overlapping activity. We can see that the activity that ends at first
+is the activity that has at most 1 set of non compatible overlapping activity or not chooosing it could cause at most one
+activity added to the optimal solution. Thus choosing the first activity to finish is a greedy choice that gives optimal
+solution. If the  activities are arranged in order of their increasing finish time then it takes only 0(n) time.
+

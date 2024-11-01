@@ -1,0 +1,19 @@
+Ways to solve recurrence 
+
+1) Substitution: Assume a solution and use mathematical induction to prove that its true for T(n) when assumed to true 
+for T(n/b) (can ignore floor/ceiling and  can ignore basecase). 
+    i) Can ignore constants added with n (for large n)
+    ii) Can find loose bound and tighten it later
+    iii) Sometimes correct guess might fail so use smaller terms of asymptotic notation
+    iv) Sometimes can substitute values to convert the recurrence formula to the one we know the answer of
+
+2) Recursion tree: Use the tree where each node represents the cost incurred at that level and add the nodes to find 
+O(f(n)) (even is some nodes dont exist think it do so sum easy) and use the root term to find Ω(f(n)) (or assume each 
+node takes constant time and the total sum is the no of nodes)
+
+3) Master method: When the recurrence is of form T(n) = aT(n/b) + f(n) then the T(n) = 0(f(n)) if f(n) is polinomially 
+greater than n^(loga/logb), T(n) = 0(n^(loga/logb)) if n^(loga/logb) is polinomially greater than f(n) and
+T(n) = 0(f(n)lg(n)) if they are equal
+
+Polinomially greater means that the ratio is polinomial of degree n where n>0.(nlogn is not polinomially greater than n)
+

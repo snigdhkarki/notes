@@ -1,0 +1,21 @@
+Randomised algorithms: Algorithms whose behaviour depends on the output of a random number generator. It's time complexity is denoted by expected runtime.
+
+Average case runtime: If multiple inputs of same size are possible which could affect the behaviour of algorithm then we use it. If all permutation equally likely to be input, its called uniform random permutation
+
+Indicator variable: of a certain event is 1 if the event occurs and 0 if the event dosent occur during an experiment.
+For example I{h} = 1 if head occurs and 0 if head dosent occur during a coin flip
+
+Random variable: is used to denote the number of time an event occurs during a certain number of experiment. 
+For example X could be a random variable that denotes the number of time a head occurs during n coin flips.
+
+Expected value: is the value that a variable is most likely to contain. Expected value of an indicator variable always follows the rule E[I{e}] = Prob{e} where e is any event. For example E[I{H}] = Prob{H} = 1/2
+
+Question: What is the expected no of times a employee swap happens if n employees are interviewed and we always want the best employee in the office?
+Let X be a random varible that denotes the number of times an employee swap happens during n interview. First we write the random variable in terms of Indicator variable. X = ∑I{s(i)} where s(i) is the indicator variable that represents the event of hiring the ith employee. Then we use the linearity property of expectation to find 
+E[X] = E[∑I{s(i)}] = ∑E[I{s(i)}] = ∑P[I{s(i)}] = ∑1/i = lgn since the probability of i being the best candidate among 1 to i candidates interviewed till then is 1/i since each candidate has equal chance of being the best candidate. Hence expected runtime = O(lgn).
+
+To make sure that each candidate has equal chance of being the best, the input must be selected from uniform random permutation so that a bad actor like hiring agency wont send us candidates in increasing order of how better they are. To make sure this dosent happen we can randomly permute the input using the following methods:
+
+1) We can randomly assign 1 to n⁴ (n⁴ used so that two elements have less chace of being mapped to same number) for each element. Then arrange them according to the assigned value in assending order.
+2) for i from 0 to n swap A[i] with A[random(i,n)] which is faster.
+

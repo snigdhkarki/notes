@@ -1,0 +1,9 @@
+Rod cutting problem
+It is a problem where given a rod of length n inch and a list of prices p[1...n] where p[i] is the price of rod of i inch. We
+want to find the max revenew we can get if cutting the rod is free. Here let the solution be ---X--X-X---X-. If we use the 
+recursive function r(n) = max{0≤i≤n}(r(i) + r(n-i)) but here we do not know the recursive base case. We only know the recursive base case when a certain condition is satisfied(when there are no more cuts in the length of rod i then the base case solution
+is p[i]. Thus in such cases we constraint the way we find the choices. Whereas using r(n) = max{0≤i≤n}(r(i) + r(n-i)) we could find the choices in any order, we contraint it so that we find it from start to end by using the recursion function 
+r(n) = max{0≤i≤n}(r{when no more cut}(i) + r(n-i)) which is the same as saying
+r(n) = max{0≤i≤n}(p(i) + r(n-i))
+The time complexity that occurs if we do not store repeating solution is T(n) = 1 + ∑{0≤i≤n}T(i). Solving this recurrence formula yeilds 0(2^n) but if we store the subproblems after solving it then it only takes 0(n²) time because there are only n possible subproblems and each subproblem only takes n no of comparision if all the subproblems of lesser size are already computed.
+

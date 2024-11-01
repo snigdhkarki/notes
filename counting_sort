@@ -1,0 +1,4 @@
+ - Counting sort
+
+Counting sort is used when the possible unique values that can be present in the input array is known and finite.Its takes time  0(n) worst case to sort such array. Here we make a table of possible values in the input and we keep tabs of how many times a unique value comes in the input array. And according to this table we can know the number of times a value less than a certain value comes in  the array to find the index of that certain value.
+

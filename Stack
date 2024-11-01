@@ -1,0 +1,7 @@
+Stack 
+- Works on LIFO principle
+- Insert called Push, Delete and return pointer to element called Pop
+- Implemented using an array where S.arr[S.top-1] is the top element 
+- Push(S, x), Pop(S), StackFull(S), StackEmpty(S) all have time complexity O(1)
+
+

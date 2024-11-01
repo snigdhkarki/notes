@@ -1,0 +1,6 @@
+Greedy algorithms 
+It is used when dynamic programming is overkill. It dosent always give the optimal solution but for many problems it does. To
+show that it gives optimal solution, we must show that a greedy choice combined with the optimal solution of the subproblem that arises after making that choice gives the optimal solution to the original problem. Some problems where it is used are:
+1) Activity selection problem
+2) Huffman encoding
+Greedy algorithm only works using topDown approach.
